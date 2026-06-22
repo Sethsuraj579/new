@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #004080;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.logo h1 {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  color: #004080;
+}
+
+.contact-info {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin: 40px 0;
+}
+
+.enquiry-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.enquiry-form h2 {
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Add at the top or anywhere */
+.nav-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.nav-links a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.nav-links a:hover {
+  background: #e6f0fa;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.login-form h2 {
+  text-align: center;
+  color: #004080;
+}
+
+button {
+  background: #004080;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button:hover {
+  background: #002d5a;
+}
+button:disabled {
+  opacity: 0.6;
+}
+
+.success-message {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #e6f7e6;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.admin-enquiries {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-enquiries table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-enquiries th,
+.admin-enquiries td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.admin-enquiries th {
+  background: #004080;
+  color: white;
+}
+
+.admin-enquiries tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  color: #555;
+}
+
+/* existing styles kept, add these below */
+
+/* Homepage sections */
+.homepage {
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hero {
+  text-align: center;
+  background: rgba(0, 64, 128, 0.05);
+  padding: 60px 40px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.hero .tagline {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #002d5a;
+}
+
+.hero .subtag {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.about p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.course-card {
+  background: #f0f7ff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border-left: 4px solid #004080;
+  transition: transform 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.course-card h3 {
+  color: #004080;
+  font-size: 1.1rem;
+}
+
+.support ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.support ul li {
+  padding: 8px 12px 8px 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004080' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 11.08V12a10 10 0 1 1-5.93-9.14'/%3E%3Cpolyline points='22 4 12 14.01 9 11.01'/%3E%3C/svg%3E") left center no-repeat;
+  background-size: 18px;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+}
+
+.fee-table th {
+  background: #004080;
+  color: white;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.fee-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.fee-table .bold-row td {
+  font-weight: 700;
+  background: #eaf1fb;
+}
+
+.fee-table.misc td:last-child {
+  text-align: right;
+}
+
+.fee-note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.enquiry-section {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.enquiry-section h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero .tagline {
+    font-size: 1.2rem;
+  }
+  section {
+    padding: 20px;
+  }
+  .support ul {
+    grid-template-columns: 1fr;
+  }
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.clear-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.clear-btn:hover:not(:disabled) {
+  background: #b71c1c;
+}
+
+.clear-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.info-message {
+  margin-bottom: 15px;
+  background: #fff3cd;
+  border-radius: 6px;
+  padding: 10px 15px;
+  border-left: 4px solid #ffeeba;
+    
+}

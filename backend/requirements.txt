@@ -1,0 +1,7 @@
+django
+gunicorn
+dj_database_url
+graphene-django
+psycopg2
+django-cors-headers
+python-dotenv
