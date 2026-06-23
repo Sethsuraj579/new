@@ -14,7 +14,7 @@ function Login({ onLogin }) {
       const res = await axios.post('/api/login/', { username, password }, { withCredentials: true });
       if (res.data.success) {
         onLogin();
-        navigate('/admin');
+        navigate('/dashboard');
       } else {
         setError('Login failed');
       }

@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache} from '@apollo/client';
 import { createHttpLink } from '@apollo/client/link/http';
 
 const httpLink = createHttpLink({
-  uri: process.env.REACT_APP_API_URL || 'http://localhost:8000/graphql/',
+  uri: process.env.REACT_APP_API_URL || 'https://innovatesphereacademy.com/graphql/',
   credentials: 'include',
 });
 

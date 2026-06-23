@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import ThreeBackground from './components/ThreeBackground';
 import HomePage from './components/HomePage';
-import AdminEnquiries from './components/AdminEnquiries';
+//import AdminEnquiries from './components/AdminEnquiries';
 import Login from './components/Login';
 import Logout from './components/Logout';
 import './styles.css';
+import CustomAdmin from './components/CustomAdmin';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -35,11 +36,11 @@ function App() {
             <Link to="/">Home</Link>
             {isAuthenticated ? (
               <>
-                <Link to="/admin">Admin</Link>
+                <Link to="/dashboard">Admin</Link>
                 <Link to="/logout">Logout</Link>
               </>
             ) : (
-              <Link to="/admin">Admin Login</Link>
+              <Link to="/dashboard">Admin Login</Link>
             )}
           </nav>
         </header>
@@ -47,10 +48,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route
-              path="/admin"
+              path="/dashboard"
               element={
                 isAuthenticated ? (
-                  <AdminEnquiries />
+                  <CustomAdmin />
                 ) : (
                   <Login onLogin={handleLogin} />
                 )
