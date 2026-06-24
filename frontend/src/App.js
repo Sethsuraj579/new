@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import './styles.css';
 import CustomAdmin from './components/CustomAdmin';
+import Courses from './components/Courses';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -34,6 +35,7 @@ function App() {
           </div>
           <nav className="nav-links">
             <Link to="/">Home</Link>
+            <Link to="/courses">Courses</Link>
             {isAuthenticated ? (
               <>
                 <Link to="/dashboard">Admin</Link>
@@ -58,6 +60,7 @@ function App() {
               }
             />
             <Route path="/logout" element={<Logout onLogout={handleLogout} />} />
+            <Route path="/courses" element={<Courses />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
